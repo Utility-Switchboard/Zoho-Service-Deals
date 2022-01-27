@@ -14,14 +14,12 @@ from zcrmsdk.src.com.zoho.crm.api.util import Choice
 # from zcrmsdk.src.com.zoho.crm.api import ParameterMap
 
 from datetime import datetime
-import psycopg2, ast
+import psycopg2
 
 from init import SDKInitializer
-from AESCipher import AESCipher
 
 from flask import Flask, request, json
 from flask_cors import CORS
-encryptInstance = AESCipher('TheBoilerCompany')
 
 app = Flask(__name__)
 CORS(app, resources={r"/*":{"origins":"*"}})
